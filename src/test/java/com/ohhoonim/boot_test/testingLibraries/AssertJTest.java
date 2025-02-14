@@ -18,6 +18,7 @@ import com.ohhoonim.boot_test.model.Note;
 
 public class AssertJTest {
 
+    // hamcrest vs assertJ 
     @Test
     @DisplayName("matcher를 사용한 경우")
     public void usingMatcher() {
@@ -30,6 +31,7 @@ public class AssertJTest {
         assertThat("foo").isEqualTo("foo");
     }
 
+    // BDD 스타일 given/when/then
     @Test
     @DisplayName("BDD 스타일의 then")
     public void bddStyleEntry() {
@@ -39,6 +41,7 @@ public class AssertJTest {
         then("foo").isEqualTo("foo");
     }
 
+    // assertJ 체이닝 사용법 
     @Test
     public void noteTest() {
         var note = new Note(UUID.randomUUID(), 
@@ -49,6 +52,7 @@ public class AssertJTest {
         assertThat(note).isInstanceOf(Note.class);
     }
 
+    // assert descriptoin (테스트에 대할 설명. 필요하지 않을 수도 있지만)
     @Test
     public void assertDescription() {
         var note = new Note(UUID.randomUUID(), 
@@ -63,6 +67,7 @@ public class AssertJTest {
         // overridingErrorMessaage, withFailMessage 사용시도 동일
     }
 
+    // exception 테스트 방법
     @Test
     public void exceptionAssertion() {
         var noteId = UUID.randomUUID();
