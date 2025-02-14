@@ -77,3 +77,7 @@ Double <|-- Fake
 
 - min(), max(), avg(), length() 등이 있다
 - 표현식 맨 마지막에 붙여서 사용한다
+
+### JsonPath에 사용된 샘플데이터
+- https://jsonplaceholder.typicode.com/posts
+- https://jsonplaceholder.typicode.com/users/1
